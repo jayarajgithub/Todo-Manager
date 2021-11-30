@@ -1,7 +1,6 @@
 require "active_record"
 
 class Todo < ActiveRecord::Base
-
   def due_today?
     due_date == Date.today
   end
@@ -40,7 +39,6 @@ class Todo < ActiveRecord::Base
     puts "Due Later\n"
     puts due_later.map { |todo| todo.to_displayable_string }
     puts "\n\n"
-
   end
 
   def self.add_task(new_todo)
